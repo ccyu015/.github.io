@@ -1,0 +1,26 @@
+<script>
+  console.log("hello world");
+  //alert("hello world");
+  var user = String(prompt(" 剪刀 石頭 布"));
+  var computer = Number(Math.random());
+  console.log(computer);
+  if (computer < 0.34) computer = "剪刀";
+  else if (computer < 0.67) computer = "石頭";
+  else computer = "布";
+  console.log(computer);
+  function cmp(u, c) {
+    if (u == c) return "平手";
+    else if (u == "剪刀")
+      if (c == "布") return "win";
+      else return "lose";
+    else if (u == "石頭")
+      if (c == "剪刀") return "win";
+      else return "lose";
+    else if (u == "布")
+      if (c == "石頭") return "win";
+      else return "lose";
+    else return "輸入錯誤";
+  }
+  console.log(cmp(user, computer));
+  alert(cmp(user, computer));
+</script>
